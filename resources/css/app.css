@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
@@ -6,6 +6,45 @@
 @source '../**/*.js';
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+}
+
+@layer components {
+    body {
+        font-family: "Inter", sans-serif;
+        background-color: #f3f4f6;
+        color: #333;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    .btn-primary {
+        @apply bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md shadow transition duration-300 ease-in-out;
+    }
+
+    .btn-success {
+        @apply bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-md shadow transition duration-300 ease-in-out;
+    }
+
+    .btn-warning {
+        @apply bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-md shadow transition duration-300 ease-in-out;
+    }
+
+    .btn-danger {
+        @apply bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-md shadow transition duration-300 ease-in-out;
+    }
+
+    .form-input {
+        @apply shadow appearance-none border rounded-md w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none;
+    }
+
+    .card {
+        @apply bg-white shadow-lg rounded-lg p-6 mb-6;
+    }
 }
